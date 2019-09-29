@@ -19,44 +19,20 @@ Bigger point in the map. As you "eat" it, the ghosts turn to frighten mode, and 
 ### Program UML
 |GameObj                        |
 |:------------------------------|
-|#locate:int[0..1]<br>
-#looklike:int<br>
-#movespeed:int<br>
-#speedTimer:int<br>
-#direction:int<br>
-#step:int<br>                   |
-|<\<constructor>>+GameObj()<br>
-+move()<br>
-+die(in:int)<br>
-+setLook(in:int)<br>
-+getLocate(in:int):int{query}<br>
-+getLook():int{query}<br>
-+getDirection():int{query}<br>
-+getStep():int{query}<br>       |
+|#locate:int[0..1]<br>#looklike:int<br>#movespeed:int<br>#speedTimer:int<br>#direction:int<br>#step:int<br>|
+|<\<constructor>>+GameObj()<br>+move()<br>+die(in:int)<br>+setLook(in:int)<br>+getLocate(in:int):int{query}<br>+getLook():int{query}<br>+getDirection():int{query}<br>+getStep():int{query}<br>|
 
 &nbsp; &nbsp; &nbsp; &#8593;
 |Ghost                          |
 |:------------------------------|
-|#map:int[0..923]<br>
-#destination:int[0..1]<br>
-#timer:int<br>
-#isfright:int<br>
-#frightTimer:int<br>
-#frightTime:int<br>             |
-|<\<constructor>>+Ghost()<br>
-#move()<br>
-#die(in:int)<br>
-#scatter()<br>
-#fright()<br>
-#chase()<br>
-#findDir()<br>                  |
+|#map:int[0..923]<br>#destination:int[0..1]<br>#timer:int<br>#isfright:int<br>#frightTimer:int<br>#frightTime:int<br>|
+|<\<constructor>>+Ghost()<br>#move()<br>#die(in:int)<br>#scatter()<br>#fright()<br>#chase()<br>#findDir()<br>|
 
 &nbsp; &nbsp; &nbsp; &#8593;
 |Blinky                         |
 |:------------------------------|
 ||
-|<\<constructor>>+Blinky(tar:GameObj,look:int)<br>
-+die(in:int)<br>                |
+|<\<constructor>>+Blinky(tar:GameObj,look:int)<br>+die(in:int)<br>|
 
 |Ghost|
 |:---:|
@@ -65,9 +41,7 @@ Bigger point in the map. As you "eat" it, the ghosts turn to frighten mode, and 
 |Pinky                          |
 |:------------------------------|
 ||
-|<\<constructor>>+Pinky(tar:GameObj,look:int)<br>
-+chase()<br>
-+die(in:int)<br>                |
+|<\<constructor>>+Pinky(tar:GameObj,look:int)<br>+chase()<br>+die(in:int)<br>|
 
 |Ghost|
 |:---:|
@@ -76,9 +50,7 @@ Bigger point in the map. As you "eat" it, the ghosts turn to frighten mode, and 
 |Inky                           |
 |:------------------------------|
 |#blinky:GameObj                |
-|<\<constructor>>+Inky(tar:GameObj,blink:GameObj,in:int)<br>
-+chase()<br>
-+die(in:int)<br>                |
+|<\<constructor>>+Inky(tar:GameObj,blink:GameObj,in:int)<br>+chase()<br>+die(in:int)<br>|
 
 |Ghost|
 |:---:|
@@ -87,9 +59,7 @@ Bigger point in the map. As you "eat" it, the ghosts turn to frighten mode, and 
 |Clyde                          |
 |:------------------------------|
 ||
-|<\<constructor>>+Clyde(tar:GameObj,in:int)<br>
-+chase()<br>
-+die(in:int)<br>                |
+|<\<constructor>>+Clyde(tar:GameObj,in:int)<br>+chase()<br>+die(in:int)<br>|
 
 |GameObj|
 |:-----:|
@@ -97,20 +67,9 @@ Bigger point in the map. As you "eat" it, the ghosts turn to frighten mode, and 
 &nbsp; &nbsp; &#8593;
 |Pacman|
 |:-----|
-|+map:int[0..923]<br>
-+eatPos:int<br>
-#preDir:int<br>
-#eaten:int<br>
-#timer:int<br>
-#powerTime<br>|
-|<\<constructor>>+Pacman()<br>
-+move()<br>
-+changeDir(in:int)<br>
-+getEaten():int<br>
-+getPower():int<br>
-+die(in:int)<br>|
+|+map:int[0..923]<br>+eatPos:int<br>#preDir:int<br>#eaten:int<br>#timer:int<br>#powerTime<br>|
+|<\<constructor>>+Pacman()<br>+move()<br>+changeDir(in:int)<br>+getEaten():int<br>+getPower():int<br>+die(in:int)<br>|
 
 ### Code description
 I compute every pixel to let the "Game object" move. Using "speedTime" and a timer to determine whether they can move or not. Every game object has it own timer.
 In the mainwindow.cpp file, I use the polymorphism technique to call all game object's move()function.
-<font color=ffffff>pixel counting takes a lot of time ><</font>
