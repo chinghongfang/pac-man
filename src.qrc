@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/new/pic">
+        <file>src/pacmanmap.jpg</file>
+        <file>src/Blinky2.png</file>
+        <file>src/Clyde2.png</file>
+        <file>src/Inky2.png</file>
+        <file>src/man2.png</file>
+        <file>src/map2.png</file>
+        <file>src/no.png</file>
+        <file>src/point2.png</file>
+        <file>src/Power2.png</file>
+        <file>src/Pinky2.png</file>
+        <file>src/fright2.png</file>
+    </qresource>
+</RCC>
