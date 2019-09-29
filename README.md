@@ -22,13 +22,15 @@ Bigger point in the map. As you "eat" it, the ghosts turn to frighten mode, and 
 |#locate:int[0..1]<br>#looklike:int<br>#movespeed:int<br>#speedTimer:int<br>#direction:int<br>#step:int<br>|
 |<\<constructor>>+GameObj()<br>+move()<br>+die(in:int)<br>+setLook(in:int)<br>+getLocate(in:int):int{query}<br>+getLook():int{query}<br>+getDirection():int{query}<br>+getStep():int{query}<br>|
 
-&nbsp; &nbsp; &nbsp; &#8593;
+&nbsp; &nbsp; &nbsp; &#8593;<br>
+
 |Ghost                          |
 |:------------------------------|
 |#map:int[0..923]<br>#destination:int[0..1]<br>#timer:int<br>#isfright:int<br>#frightTimer:int<br>#frightTime:int<br>|
 |<\<constructor>>+Ghost()<br>#move()<br>#die(in:int)<br>#scatter()<br>#fright()<br>#chase()<br>#findDir()<br>|
 
-&nbsp; &nbsp; &nbsp; &#8593;
+&nbsp; &nbsp; &nbsp; &#8593;<br>
+
 |Blinky                         |
 |:------------------------------|
 ||
@@ -37,7 +39,8 @@ Bigger point in the map. As you "eat" it, the ghosts turn to frighten mode, and 
 |Ghost|
 |:---:|
 
-&nbsp; &nbsp; &#8593;
+&nbsp; &nbsp; &#8593;<br>
+
 |Pinky                          |
 |:------------------------------|
 ||
@@ -46,7 +49,8 @@ Bigger point in the map. As you "eat" it, the ghosts turn to frighten mode, and 
 |Ghost|
 |:---:|
 
-&nbsp; &nbsp; &#8593;
+&nbsp; &nbsp; &#8593;<br>
+
 |Inky                           |
 |:------------------------------|
 |#blinky:GameObj                |
@@ -55,7 +59,8 @@ Bigger point in the map. As you "eat" it, the ghosts turn to frighten mode, and 
 |Ghost|
 |:---:|
 
-&nbsp; &nbsp; &#8593;
+&nbsp; &nbsp; &#8593;<br>
+
 |Clyde                          |
 |:------------------------------|
 ||
@@ -64,7 +69,8 @@ Bigger point in the map. As you "eat" it, the ghosts turn to frighten mode, and 
 |GameObj|
 |:-----:|
 
-&nbsp; &nbsp; &#8593;
+&nbsp; &nbsp; &#8593;<br>
+
 |Pacman|
 |:-----|
 |+map:int[0..923]<br>+eatPos:int<br>#preDir:int<br>#eaten:int<br>#timer:int<br>#powerTime<br>|
